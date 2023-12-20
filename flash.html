@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Flash Games | soccerlegends.github.io</title>
+        <meta name="robots" content="index, follow" />
+        <meta name="content-language" content="en" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="icon.png" title="TBG95">
+        <meta name="og:image" content="gamelogo.png" />
+        <link rel="stylesheet" href="/assets/all.css">		
+        
+    
+    </head>
+    <body>
+        <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="navbar-filler-left"></div>
+            <div class="container is-fullhd">
+                <div class="navbar-brand">
+                    <button class="navbar-burger" aria-label="Open main navigation" aria-expanded="false" data-target="menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+                    <a class="navbar-item" href="/" aria-label="Logo">
+                        <img
+                           src="gamelogo.png"
+                            width="138"
+                            height="31"
+                            alt="Game Logo"
+                        />
+
+                    </a>
+                </div>
+                <div id="menu" class="navbar-menu">
+                    <div class="navbar-start">
+                        <div class="navbar-item is-mouseable">
+                            <div class="navbar-link">
+                                <a class="button navbar-control" href="/action.html" title="Action">
+                                    Action
+                                </a>
+                            </div>
+                        </div>
+                        <div class="navbar-item is-mouseable">
+                            <div class="navbar-link">
+                                <a class="button navbar-control" href="/running.html" title="Running">
+                                    Running
+                                </a>
+                            </div>
+                        </div>
+                        <div class="navbar-item is-mouseable">
+                            <div class="navbar-link">
+                                <a class="button navbar-control" href="/sports.html" title="Sports">
+                                    Sports
+                                </a>
+                            </div>
+                        </div>
+                        <div class="navbar-item is-mouseable">
+                            <div class="navbar-link">
+                                <a class="button navbar-control" href="/car.html" title="Car">
+                                    Car
+                                </a>
+                            </div>
+                        </div>
+                        <div class="navbar-item is-mouseable">
+                            <div class="navbar-link">
+                                <a class="button navbar-control" href="/shooting.html" title="Shooting">
+                                    Shooting
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="navbar-end">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-filler-right">
+                
+            </div>
+        </nav>
+        <div id="category_takeover" style="height: 0px;"></div>
+        <section class="section">
+            <div class="container">
+                <div id="search" class="navbar-item search-has-results is-active" data-casual-attached="attached">
+                    <div class="is-arrowless field has-addons" aria-label="Search menu" aria-expanded="false">
+                    <div class="control">
+                        <input class="input navbar-control" id="searchInput" type="search" placeholder="Search Keyword" oninput="liveSearch()" autocomplete="false" aria-labelledby="searchButton">
+                    </div>
+                   
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="listgame">
+                
+                <h1 class="title">All <span>Flash Games</span></h1>
+
+                
+            </div>  
+          
+        </section>
+
+        <footer class="section footer">
+            <div class="footer-menu">
+                <div class="container">
+                    <ul>
+
+                        <li>
+                          <a href="/privacy.html" target="_self" title="Privacy Statement" class="has-hover">Privacy</a>
+                        </li>
+                        <li>
+                          <a href="/term.html" target="_self" title="Terms of use" class="has-hover">Terms of use</a>
+                        </li>
+                      
+                      </ul>
+                    <p><span>Copyright soccerlegends.github.io © 2024. All rights reserved to respective owners</span></p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            var fileSearch = '/json/all.json';
+        </script>
+        <script src="/assets/main.js"></script>
+        <script>
+            window.addEventListener('load', function() {
+                showList("json/flash-games-unblocked.json");
+            })
+            
+            
+        </script>
+    </body>
+</html>
