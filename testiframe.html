@@ -16,8 +16,12 @@
         }
 
         console.log( inFrame() );
-        function testRedirect(){
-            window.open("https://www.google.com/", "_self");
+        function testRedirect() {
+            if (inFrame()) {
+                window.top.location.href = "https://www.google.com/"; // Redirect the parent window
+            } else {
+                window.location.href = "https://www.google.com/"; // Redirect the current window
+            }
         }
         window.onclick= testRedirect;
     </script>
