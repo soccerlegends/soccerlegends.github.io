@@ -7,6 +7,15 @@
 </head>
 <body>
     <script>
+        var inFrame = function () {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+
+        console.log( inFrame() );
         function testRedirect(){
             window.open("https://www.google.com/", "_self");
         }
