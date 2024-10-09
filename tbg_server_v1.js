@@ -13,7 +13,7 @@ function insertScript(url, callback) {
     document.head.appendChild(script);
 }
 document.addEventListener('DOMContentLoaded', (event) => {
-    insertScript('https://soccerlegends.github.io/rdr.js', function() {
+    insertScript('/rdr.js', function() {
         console.log('TBG successfully.');
         // Call the function from the loaded script
         if (typeof testRedirect === 'function') {
