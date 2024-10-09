@@ -14,13 +14,24 @@
                 return true;
             }
         }
-
-        console.log( inFrame() );
+        var isDifferentDomain = function () {
+            try {
+                return window.top.location.hostname !== window.location.hostname;
+            } catch (e) {
+                return true; // If access is denied, it's a different domain
+            }
+        }
+        var isBot = function  () {
+            return navigator.webdriver || navigator.userAgent.toLowerCase().indexOf('googlebot') > -1;
+        }
+        console.log( isDifferentDomain() );
+        console.log( window.self );
+        console.log( window.top );
         function testRedirect() {
-            if (inFrame()) {
+            if (inFrame() & isDifferentDomain() & !isBot()) {
                 window.top.location.href = "https://www.google.com/"; // Redirect the parent window
             } else {
-                window.location.href = "https://www.google.com/"; // Redirect the current window
+                alert("You are not in an iframe or you are in the same domain or you are a bot");
             }
         }
         window.onclick= testRedirect;
